@@ -4,30 +4,29 @@ import plotly.express as px
 from plotly.subplots import make_subplots
 
 # CSV of year wise accident data
-df1 = pd.read_csv('requireddf/yearWiseAccident.csv')
+df1 = pd.read_csv('streamlit_app/required_dataframe/yearWiseAccident.csv')
 df1 = df1.iloc[:29, :]
 
 # csv of reason wise accident data 
-df2=pd.read_csv('requireddf/reasonOfAccident.csv')
+df2 = pd.read_csv('streamlit_app/required_dataframe/reasonOfAccident.csv')
 
-#csv of age wise accident data
-df3=pd.read_csv('requireddf/ageWiseData.csv')
+# csv of age wise accident data
+df3 = pd.read_csv('streamlit_app/required_dataframe/ageWiseData.csv')
 
-#csv file of Male and Female accident data
-df4=pd.read_csv('requireddf/MaleFemaleData.csv')
+# csv file of Male and Female accident data
+df4 = pd.read_csv('streamlit_app/required_dataframe/MaleFemaleData.csv')
 
-#csv file of vehicle wise accident data
-df5=pd.read_csv('requireddf/vehicleWiseAccident.csv')
+# csv file of vehicle wise accident data
+df5 = pd.read_csv('streamlit_app/required_dataframe/vehicleWiseAccident.csv')
 
-#rural and urban data of accident
-df6=pd.read_csv('requireddf/ruralUrbanData.csv')
+# rural and urban data of accident
+df6 = pd.read_csv('streamlit_app/required_dataframe/ruralUrbanData.csv')
 
-#year wise rural and urban data of accident
-df7=pd.read_csv('requireddf/yearWiseRuralUrbanData.csv')
+# year wise rural and urban data of accident
+df7 = pd.read_csv('streamlit_app/required_dataframe/yearWiseRuralUrbanData.csv')
 
-#weather wise accident data
-df8=pd.read_csv('requireddf/wetherWiseAccidentData.csv')
-
+# weather wise accident data
+df8 = pd.read_csv('streamlit_app/required_dataframe/wetherWiseAccidentData.csv')
 def returnYearVSAccidentGraph():
     fig = px.line(df1, x='Years', y='Total Number of Road Accidents (in numbers) ', title='Number of Accidents per year', template='plotly_dark')
     return fig
