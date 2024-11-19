@@ -8,16 +8,6 @@ st.markdown("""
 Welcome to the **Road Accident & Fleet Efficiency Dashboard**! This platform provides a detailed analysis of road accidents in India and the condition of the truck fleet. The interactive features help to understand trends, fleet efficiency, and factors impacting the work state of truck drivers in India.
 """)
 
-# Section for Snowflake Utilization
-st.markdown("""
-### Snowflake Platform Usage:
-We are leveraging Snowflake’s cloud-based data warehouse to process and analyze large-scale road accident and fleet efficiency data. With Snowflake, we ensure seamless integration with our data sources and provide a robust platform to derive insights.
-
-**Key Tools and Techniques Used**:
-- **Snowflake CLI** for data access and interaction with our cloud data warehouse.
-- **VSCode Extensions** for efficient code writing and integration with Snowflake.
-- **REST API** for automated data fetching and visualizations.
-""")
 
 # Description of Dashboard Features
 st.markdown("""
