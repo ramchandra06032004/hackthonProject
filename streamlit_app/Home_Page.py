@@ -1,34 +1,59 @@
 import streamlit as st
 
-# Set up the title page
-st.set_page_config(page_title="Road Accident Analysis in India", layout="centered")
+# Title for the homepage
+st.title('Road Accident & Fleet Efficiency Dashboard')
 
-# Main title
-st.title("Road Accident Analysis & Findings Insights in India")
-
-# Subtitle with message
-st.subheader("Insights into Accident Patterns and Future Trend Predictions")
-
-# Brief introduction message
+# Subtitle
 st.markdown("""
-Welcome to our interactive dashboard on road accidents across India. This platform aims to provide a deep dive into accident data, exploring various patterns and factors to understand the root causes and trends over time. Through data-driven insights, we aim to support efforts toward safer roads and informed policy making.
+Welcome to the **Road Accident & Fleet Efficiency Dashboard**! This platform provides a detailed analysis of road accidents in India and the condition of the truck fleet. The interactive features help to understand trends, fleet efficiency, and factors impacting the work state of truck drivers in India.
 """)
 
-# Sections to guide users on available insights
-st.markdown("### Key Insights Explored:")
-st.write("In this analysis, we examine the following aspects:")
-
+# Section for Snowflake Utilization
 st.markdown("""
-- **Future Trend Prediction**: Using an **RNN model** trained on historical data, we forecast accident trends for upcoming years.
-- **Monthly Distribution of Accidents**: Understand how accident frequencies change month by month.
-- **Primary Causes of Accidents**: Analyze factors such as overspeeding, driver fatigue, and other causes.
-- **Gender-Based Distribution**: Study accident distribution among male and female drivers.
-- **Vehicle Type Analysis**: Assess accident rates based on vehicle types, including trucks, cars, two-wheelers, and more.
-- **Weather Conditions**: Observe how weather types (rainy, sunny, foggy, etc.) impact accident occurrences.
-- **Yearly Trends and Urban vs. Rural Data**: Compare accident patterns over years, with a focus on rural and urban differences.
+### Snowflake Platform Usage:
+We are leveraging Snowflake’s cloud-based data warehouse to process and analyze large-scale road accident and fleet efficiency data. With Snowflake, we ensure seamless integration with our data sources and provide a robust platform to derive insights.
+
+**Key Tools and Techniques Used**:
+- **Snowflake CLI** for data access and interaction with our cloud data warehouse.
+- **VSCode Extensions** for efficient code writing and integration with Snowflake.
+- **REST API** for automated data fetching and visualizations.
 """)
 
-# Impact statement
+# Description of Dashboard Features
 st.markdown("""
-By examining these key areas, we aim to uncover critical patterns that can inform safety initiatives and contribute to the well-being of road users across India. Let's explore the data together and work towards actionable insights for a safer future on our roads.
+### What You Can Explore:
+1. **Age and Gender-wise Accident Distribution**  
+   Understand how road accidents vary across different age groups and genders, helping identify vulnerable groups and focus on safety measures.
+   
+2. **Reasons for Accidents**  
+   Discover the most common causes of accidents and explore actionable steps to mitigate these risks.
+
+3. **Rural vs Urban Road Accident Distribution**  
+   Compare accident statistics in rural and urban areas, identifying location-specific risks for targeted interventions.
+
+4. **Vehicle Fleet Efficiency**  
+   Analyze the types, age, and condition of vehicles (especially trucks) operating in India. Investigate how fleet age and efficiency correlate with accident rates.
+
+5. **Weather-wise Accident Distribution**  
+   Understand the role of weather conditions in accident occurrence and how adverse weather impacts driver behavior.
+
+6. **Year-wise Accident Distribution**  
+   Explore trends in road accidents over time, identifying peak years of accidents and their correlation with policy changes or economic factors.
+   
+7. **Accident vs. Fleet Employment**  
+   Investigate the relationship between accidents, fleet employment, and driver conditions to uncover factors contributing to the state of truck drivers in India.
 """)
+
+# Recommendations Section
+st.markdown("""
+### Insights & Recommendations for Improving Truck Driver Work State:
+Based on the data analysis, we propose the following recommendations to improve the work state of truck drivers in India:
+- **Fleet Age Optimization**: The older the fleet, the higher the chances of accidents due to mechanical failure. It’s crucial to replace aging trucks and improve vehicle maintenance schedules.
+- **Driver Welfare Programs**: Implementing better driver welfare programs, focusing on mental health and physical well-being, especially after long working hours.
+- **Technology Integration**: Introducing telematics and GPS systems in trucks to monitor driver behavior and ensure safety on the road.
+- **Driver Training**: Offering more focused and region-specific driver training programs, particularly for rural drivers who may not be accustomed to modern road safety practices.
+- **Regulation & Policy Change**: Enforcing strict regulations on vehicle condition and age, and introducing financial incentives for maintaining a safer, more efficient fleet.
+""")
+
+# Footer
+st.info("💡 *Data and insights pave the way to safer roads and better truck driver conditions. Explore the dashboard to find patterns and contribute to making India's road transport safer!*")

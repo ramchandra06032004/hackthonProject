@@ -9,36 +9,39 @@ st.title("Weather-wise Road Accident Distribution in India")
 
 # Brief introduction
 st.markdown("""
-This section examines how weather conditions impact road accidents in India. By analyzing accident rates across various weather types, we can gain insights into how weather affects road safety, especially during challenging conditions like rain or fog.
+In this section, we explore how various weather conditions influence road accidents in India. 
+By analyzing accident data across different weather types, we can identify specific conditions that increase the likelihood of accidents, especially during adverse weather such as rain or fog.
 """)
 
 # Plot for Weather-wise Distribution of Road Accidents
 st.subheader("Accidents by Weather Condition")
-weather_graph = returnWeatherWiseAccidentGraph()  # Call function to get weather-wise accident distribution graph
-st.plotly_chart(weather_graph)  # Display the graph
+weather_graph = returnWeatherWiseAccidentGraph()  # Fetching the weather-wise accident distribution graph
+st.plotly_chart(weather_graph)  # Display the graph interactively
 
 # Storytelling explanation for weather-wise accident trends
 st.markdown("""
 ### Key Insights:
-1. **Sunny or Clear Weather**:
-   - Surprisingly, the majority of accidents occur during clear or sunny weather. This could be due to higher traffic volumes, driver overconfidence, or increased vehicle speeds in good visibility conditions.
-   - In clear weather, drivers may not anticipate accidents as readily, potentially leading to less caution on the road. 
+1. **Clear or Sunny Weather**:
+   - Despite expectations, most accidents occur during clear or sunny weather. This may be attributed to higher traffic volumes, driver complacency, or speeding in good visibility conditions.
+   - In clear weather, drivers might assume that the roads are safer, which leads to less caution and a higher likelihood of accidents.
 
-2. **Rainy or Foggy Conditions**:
-   - While accidents are less frequent in adverse weather conditions, they tend to be more severe due to factors such as reduced visibility, slippery road surfaces, and extended braking distances.
-   - Rainy and foggy weather still contributes significantly to accident statistics and calls for cautious driving practices to mitigate risks in these conditions.
+2. **Rainy or Foggy Weather**:
+   - Although accidents are less frequent in rainy or foggy weather, these accidents tend to be more severe. Poor visibility, slippery roads, and longer stopping distances all contribute to higher risk.
+   - The severity of accidents in such weather underlines the importance of adopting defensive driving practices and being extra cautious during adverse conditions.
 
-3. **Weather-Specific Recommendations**:
-   - During sunny and clear weather, promoting awareness of safe driving practices—such as observing speed limits, maintaining safe distances, and avoiding distractions—can help reduce accident rates.
-   - In adverse weather, infrastructure improvements like reflective road signs, road lighting, and warning systems can help improve safety.
+3. **Weather-Specific Safety Recommendations**:
+   - **Clear Weather**: Promote awareness about the risks of speeding and distractions in favorable conditions. Encourage maintaining safe distances and being vigilant on the road.
+   - **Adverse Weather**: Improve infrastructure with better road signage, better road lighting, and visibility enhancements. Encourage safer driving practices, such as reducing speed and using headlights in fog or rain.
 """)
 
-# Additional analysis section
+# Additional analysis and targeted recommendations
 st.markdown("""
-## Analysis of Weather-Related Factors on Accident Rates
-Understanding that most accidents happen in favorable weather conditions allows for targeted interventions:
-- **Driver Education**: Encouraging safe driving habits in all weather conditions is essential, as accident rates are high even when visibility and road conditions are optimal.
-- **Safety Campaigns**: Public safety campaigns focused on cautious driving in clear weather may be as crucial as those aimed at adverse weather driving.
+## Analyzing Weather's Impact on Accident Rates:
+The analysis highlights that while adverse weather contributes to fewer accidents, these incidents are often more serious. To address these trends, the following actions are recommended:
 
-With better awareness and infrastructure, accident rates in both clear and adverse weather conditions can be minimized.
+- **Driver Education**: Promote consistent safe driving habits across all weather conditions. Safety campaigns should emphasize the importance of caution, whether it's sunny or rainy.
+- **Enhanced Infrastructure**: Reflective road signs, road lighting, and smart warning systems can help improve safety during adverse weather conditions, reducing the severity of accidents.
+
+By implementing these strategies, we can mitigate the risk of accidents and create safer road environments in both favorable and challenging weather conditions.
 """)
+st.info("💡 Tip: Explore the interactive graph above to understand the distribution of road accidents based on different weather conditions.")

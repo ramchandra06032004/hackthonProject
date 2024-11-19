@@ -27,6 +27,11 @@ df7 = pd.read_csv('streamlit_app/required_dataframe/yearWiseRuralUrbanData.csv')
 
 # weather wise accident data
 df8 = pd.read_csv('streamlit_app/required_dataframe/wetherWiseAccidentData.csv')
+
+#import sale of vehicle data
+df9=pd.read_csv('streamlit_app/required_dataframe/yearWiseSaleFinal.csv')
+
+
 def returnYearVSAccidentGraph():
     fig = px.line(df1, x='Years', y='Total Number of Road Accidents (in numbers) ', title='Number of Accidents per year', template='plotly_dark')
     return fig
@@ -109,3 +114,15 @@ def returnYearWiseRuralUrbanGraph(year):
 def returnWeatherWiseAccidentGraph():
     fig = px.pie(df8, values='Accidents', names='Weather', title='Accidents According to Weather', template='plotly_dark')
     return fig
+
+
+def returnsaleGraph(vehicle):
+    if vehicle == 'combined':
+        fig = px.line(df9, x='Year', y=['Passenger Cars', 'Utility Vehicles', 'Vans', 'Total Passenger Vehicles', 
+                                   'MandHCVs', 'LCVs', 'Total CVs', 'Three Wheelers', 'Scooters', 
+                                   'Motorcycles', 'Mopeds', 'Total Two Wheelers'], 
+              title='Year Wise Vehicle Sale')
+        return fig
+    else:
+        fig = px.line(df9, x='Year', y=vehicle, title=f'Year-wise {vehicle} Sales', template='plotly_dark')
+        return fig
