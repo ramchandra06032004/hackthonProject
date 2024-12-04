@@ -5,32 +5,33 @@ from plotly.subplots import make_subplots
 
 
 # CSV of year wise accident data
-df1 = pd.read_csv('required_dataframe/yearWiseAccident.csv')
+
+df1 = pd.read_csv('streamlit_app/required_dataframe/yearWiseAccident.csv')
 df1 = df1.iloc[:29, :]
 
 # csv of reason wise accident data 
-df2 = pd.read_csv('required_dataframe/reasonOfAccident.csv')
+df2 = pd.read_csv('streamlit_app/required_dataframe/reasonOfAccident.csv')
 
 # csv of age wise accident data
-df3 = pd.read_csv('required_dataframe/ageWiseData.csv')
+df3 = pd.read_csv('streamlit_app/required_dataframe/ageWiseData.csv')
 
 # csv file of Male and Female accident data
-df4 = pd.read_csv('required_dataframe/MaleFemaleData.csv')
+df4 = pd.read_csv('streamlit_app/required_dataframe/MaleFemaleData.csv')
 
 # csv file of vehicle wise accident data
-df5 = pd.read_csv('required_dataframe/vehicleWiseAccident.csv')
+df5 = pd.read_csv('streamlit_app/required_dataframe/vehicleWiseAccident.csv')
 
 # rural and urban data of accident
-df6 = pd.read_csv('required_dataframe/ruralUrbanData.csv')
+df6 = pd.read_csv('streamlit_app/required_dataframe/ruralUrbanData.csv')
 
 # year wise rural and urban data of accident
-df7 = pd.read_csv('required_dataframe/yearWiseRuralUrbanData.csv')
+df7 = pd.read_csv('streamlit_app/required_dataframe/yearWiseRuralUrbanData.csv')
 
 # weather wise accident data
-df8 = pd.read_csv('required_dataframe/wetherWiseAccidentData.csv')
+df8 = pd.read_csv('streamlit_app/required_dataframe/wetherWiseAccidentData.csv')
 
 # import sale of vehicle data
-df9 = pd.read_csv('required_dataframe/yearWiseSaleFinal.csv')
+df9 = pd.read_csv('streamlit_app/required_dataframe/yearWiseSaleFinal.csv')
 
 
 def returnYearVSAccidentGraph():
